@@ -319,6 +319,8 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
         checkNumberOperands(expr.operator, left, right);
 //< check-star-operand
         return (double)left * (double)right;
+      default:
+        break;
     }
 
     // Unreachable.
@@ -454,6 +456,8 @@ class Interpreter implements Expr.Visitor<Object>, Stmt.Visitor<Void> {
         checkNumberOperand(expr.operator, right);
 //< check-unary-operand
         return -(double)right;
+      default:
+        break;
     }
 
     // Unreachable.
