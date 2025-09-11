@@ -327,6 +327,8 @@ class Interpreter implements Expr.Visitor<Object>,
         checkNumberOperands(expr.operator, left, right);
 //< check-star-operand
         return (double)left * (double)right;
+      default:
+        break;
     }
 
     // Unreachable.
@@ -462,6 +464,8 @@ class Interpreter implements Expr.Visitor<Object>,
         checkNumberOperand(expr.operator, right);
 //< check-unary-operand
         return -(double)right;
+      default:
+        break;
     }
 
     // Unreachable.
